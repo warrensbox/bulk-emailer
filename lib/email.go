@@ -17,7 +17,7 @@ const (
 	APPURL       = "https://bittrove.org"
 	APPNAME      = "BitTrove"
 	APPCOPY      = "Ⓒ 2019 BitTrove - Crafted with ❤ in San Francisco"
-	EMAILSUBJECT = "Wake Up! It's 2015"
+	EMAILSUBJECT = "Wake Up! It's 2019"
 	EMAILYOUTUBE = "https://youtu.be/5nrYOoPeUyA"
 	EMAILWEBSITE = "https://bittrove.org"
 	SEND_OK      = "{ \"message\": \"Message sent successfully\"}"
