@@ -91,7 +91,7 @@ func composeEmail(orgname string, position string, name string) hermes.Email {
 				"Excel Spreadsheets and paper files are obsolete!\n",
 				"Say hello to BitTrove! It’s an intuitive web app that allows organizations to keep cumulative records of members, meetings, events, and attendance in one convenient location. " +
 					"Many organizations from different universities use this program. So what are you waiting for? 	" +
-					"Leave a legacy - " + orgname + " will love you for it!\n",
+					"Leave a legacy - " + orgname + " will thank you for it!\n",
 				"Please share this video ad with the officers in your organization: " + EMAILYOUTUBE + "\n",
 				"Register your organization for free at: " + EMAILWEBSITE + "\n",
 				"We look forward to hearing from you.\n",
