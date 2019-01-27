@@ -23,6 +23,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"sync"
 
 	"github.com/pborman/getopt"
 	"github.com/warrensbox/bulk-emailer/lib"
@@ -50,6 +51,7 @@ func main() {
 	}
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
+	var wg sync.WaitGroup
 	fmt.Println("Attempting to send messages!")
 	for {
 		line, error := reader.Read()
@@ -64,17 +66,15 @@ func main() {
 		var name = line[2]
 		var email = line[3]
 
-		if lib.ValidateFormat(email) == nil && lib.ValidateHost(email) == nil {
-			fmt.Println("Sending email to: " + email)
-			msgInfo := lib.SendEmail(email, orgname, position, name)
-			fmt.Println(msgInfo)
-		} else {
-			fmt.Println("Unable to send message due to invalid format..")
-			fmt.Println("Invalid email: " + email)
-		}
+		wg.Add(1)
+		go func(email string, orgname string, position string, name string) {
+			lib.SendEmail(email, orgname, position, name)
+			wg.Done()
+		}(email, orgname, position, name)
 
-		fmt.Println("---------------------------")
 	}
+
+	wg.Wait()
 }
 
 func usageMessage() {

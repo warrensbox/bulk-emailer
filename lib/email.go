@@ -20,12 +20,12 @@ const (
 	EMAILSUBJECT = "Wake Up! It's 2019"
 	EMAILYOUTUBE = "https://youtu.be/5nrYOoPeUyA"
 	EMAILWEBSITE = "https://bittrove.org"
-	SEND_OK      = "{ \"message\": \"Message sent successfully\"}"
-	SEND_NOT_OK  = "{ \"message\": \"Unble to send message\"}"
-	IMGHEADER    = "https://s3.us-east-2.amazonaws.com/kepler-images/bittrove/bittrove_with_logo_email.png"
+	//SEND_OK      = "{ \"message\": \"Message sent successfully\"}"
+	//SEND_NOT_OK  = "{ \"message\": \"Unble to send message\"}"
+	IMGHEADER = "https://s3.us-east-2.amazonaws.com/kepler-images/bittrove/bittrove_with_logo_email.png"
 )
 
-func SendEmail(contact_email string, orgname string, position string, name string) string {
+func SendEmail(contact_email string, orgname string, position string, name string) {
 
 	session := session.Must(session.NewSession())
 	svc := ssm.New(session)
@@ -58,9 +58,10 @@ func SendEmail(contact_email string, orgname string, position string, name strin
 	errEmail := gophermail.SendMail(SMTPPORT, auth, &msg)
 	if errEmail != nil {
 		fmt.Println(errEmail)
-		return SEND_NOT_OK
+		fmt.Printf("FAILED to send email to : %s\n", contact_email)
 	}
-	return SEND_OK
+
+	fmt.Printf("SUCCESSFULLY to send email to : %s\n", contact_email)
 }
 
 func getEmailCredential(svc *ssm.SSM, val string) string {
