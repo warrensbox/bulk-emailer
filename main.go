@@ -21,34 +21,74 @@ import (
 	"encoding/csv"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"os"
 	"sync"
 
-	"github.com/pborman/getopt"
 	"github.com/warrensbox/bulk-emailer/lib"
+	kingpin "gopkg.in/alecthomas/kingpin.v2"
 )
+
+var (
+	versionFlag   *bool
+	fromEmail     *string
+	msgContent    *string
+	msgSubject    *string
+	contactEmails *string
+)
+
+func init() {
+
+	const (
+		cmdDesc           = "Lets you send bulk emails"
+		versionFlagDesc   = "Displays the version of appinstall"
+		fromEmailgDesc    = "Provide sender's email"
+		msgContentDesc    = "Provide message content"
+		msgSubjectDesc    = "Provide email subject"
+		contactEmailsDecs = "Provide contact cvs file"
+	)
+
+	versionFlag = kingpin.Flag("version", versionFlagDesc).Short('v').Bool()
+	fromEmail = kingpin.Flag("from", fromEmailgDesc).Short('f').String()
+	msgContent = kingpin.Flag("message", msgContentDesc).Short('c').String()
+	msgSubject = kingpin.Flag("subject", msgSubjectDesc).Short('s').String()
+	contactEmails = kingpin.Flag("contacts", contactEmailsDecs).Short('e').String()
+
+}
 
 func main() {
 
-	helpFlag := getopt.BoolLong("help", 'h', "displays help message")
-	filePath := getopt.StringLong("file", 'f', "", "--file", "Path to csv file")
+	kingpin.CommandLine.Interspersed(false)
+	kingpin.Parse()
 
-	getopt.Parse()
-
-	if *helpFlag {
-		usageMessage()
-	} else if *filePath == "" {
+	if *contactEmails == "" {
 		fmt.Println("You must provide a csv file")
-		usageMessage()
 	}
 
-	csvFile, errorFile := os.Open(*filePath)
+	if *msgContent == "" {
+		fmt.Println("You must provide a message content file")
+	}
+
+	csvFile, errorFile := os.Open(*contactEmails)
+	defer csvFile.Close()
+	contentFile, errorContentFile := os.Open(*msgContent)
+	defer contentFile.Close()
 
 	if errorFile != nil {
-		log.Fatal("Unable to open file")
+		log.Fatal("Unable to open csv file")
 		os.Exit(1)
 	}
+
+	if errorContentFile != nil {
+		log.Fatal("Unable to open content file")
+		os.Exit(1)
+	}
+
+	baseStr, _ := ioutil.ReadAll(contentFile)
+
+	strContent := string(baseStr)
+
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
 	var wg sync.WaitGroup
@@ -61,24 +101,22 @@ func main() {
 			log.Fatal(error)
 		}
 
-		var orgname = line[0]
-		var position = line[1]
-		var name = line[2]
-		var email = line[3]
+		var email = line[0]
+
+		var FromEmail = ""
+		FromEmail = *fromEmail
+
+		var MsgSubject = ""
+		MsgSubject = *msgSubject
 
 		wg.Add(1)
-		go func(email string, orgname string, position string, name string) {
-			lib.SendEmail(email, orgname, position, name)
+		go func(email string, FromEmail string, msgSubject string, msgStr string) {
+			lib.SendEmail(email, FromEmail, MsgSubject, strContent)
 			wg.Done()
-		}(email, orgname, position, name)
+		}(email, FromEmail, MsgSubject, strContent)
 
 	}
 
+	fmt.Println(strContent)
 	wg.Wait()
-}
-
-func usageMessage() {
-	fmt.Print("\n\n")
-	getopt.PrintUsage(os.Stderr)
-	fmt.Println("Pass path to csv file to -f or --file; example ./main -f test.csv")
 }
