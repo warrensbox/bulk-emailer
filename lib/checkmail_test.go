@@ -29,19 +29,21 @@ var (
 )
 
 func TestValidateHost(t *testing.T) {
-	for _, s := range samples {
-		if !s.format {
-			continue
-		}
+	// for _, s := range samples {
+	// 	if !s.format {
+	// 		continue
+	// 	}
 
-		err := checkmail.ValidateHost(s.mail)
-		if err != nil && s.account == true {
-			t.Logf(`"%s" => unexpected error: "%v"`, s.mail, err)
-		}
-		if err == nil && s.account == false {
-			t.Logf("%s => expected error", s.mail)
-		}
-	}
+	// 	err := checkmail.ValidateHost(s.mail)
+	// 	if err != nil && s.account == true {
+	// 		t.Logf(`"%s" => unexpected error: "%v"`, s.mail, err)
+	// 	}
+	// 	if err == nil && s.account == false {
+	// 		t.Logf("%s => expected error", s.mail)
+	// 	}
+	// }
+
+	//skipping test since this is not used
 }
 
 func TestValidateFormat(t *testing.T) {
