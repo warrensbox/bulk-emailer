@@ -30,10 +30,6 @@
   version = "1.16.20"
 
 [[constraint]]
-  name = "github.com/matcornic/hermes"
-  version = "1.2.0"
-
-[[constraint]]
   name = "github.com/warrensbox/falcon-form"
   version = "0.1.132"
 

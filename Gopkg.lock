@@ -18,6 +18,25 @@
   version = "v2.17.1"
 
 [[projects]]
+  branch = "master"
+  digest = "1:315c5f2f60c76d89b871c73f9bd5fe689cad96597afd50fb9992228ef80bdd34"
+  name = "github.com/alecthomas/template"
+  packages = [
+    ".",
+    "parse",
+  ]
+  pruneopts = "UT"
+  revision = "a0175ee3bccc567396460bf5acd36800cb10c49c"
+
+[[projects]]
+  branch = "master"
+  digest = "1:c198fdc381e898e8fb62b8eb62758195091c313ad18e52a3067366e1dda2fb3c"
+  name = "github.com/alecthomas/units"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "2efee857e7cfd4f3d0138cc3cbb1b4966962b93a"
+
+[[projects]]
   digest = "1:10bb36acbe3beb4e529f2711e02c66335adc17dffaceb1d6ceca9554c2d8baa0"
   name = "github.com/aokoli/goutils"
   packages = ["."]
@@ -183,6 +202,14 @@
   revision = "915654e7eabcea33ae277abbecf52f0d8b7a9fdc"
 
 [[projects]]
+  digest = "1:c06d9e11d955af78ac3bbb26bd02e01d2f61f689e1a3bce2ef6fb683ef8a7f2d"
+  name = "gopkg.in/alecthomas/kingpin.v2"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "947dcec5ba9c011838740e680966fd7087a71d0d"
+  version = "v2.2.6"
+
+[[projects]]
   branch = "master"
   digest = "1:a5304cc72aa1c02f2f34783300c6fd32b031c92e34f2a9c31404f0f1ce96577d"
   name = "gopkg.in/jpoehls/gophermail.v0"
@@ -205,8 +232,8 @@
     "github.com/aws/aws-sdk-go/aws",
     "github.com/aws/aws-sdk-go/aws/session",
     "github.com/aws/aws-sdk-go/service/ssm",
-    "github.com/matcornic/hermes",
     "github.com/warrensbox/falcon-form/lib",
+    "gopkg.in/alecthomas/kingpin.v2",
     "gopkg.in/jpoehls/gophermail.v0",
   ]
   solver-name = "gps-cdcl"
