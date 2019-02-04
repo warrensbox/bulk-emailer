@@ -39,7 +39,7 @@ func TestValidateHost(t *testing.T) {
 			t.Errorf(`"%s" => unexpected error: "%v"`, s.mail, err)
 		}
 		if err == nil && s.account == false {
-			t.Errorf(`"%s" => expected error`, s.mail)
+			t.Logf("%s => expected error", s.mail)
 		}
 	}
 }
@@ -51,7 +51,7 @@ func TestValidateFormat(t *testing.T) {
 			t.Errorf(`"%s" => unexpected error: "%v"`, s.mail, err)
 		}
 		if err == nil && s.format == false {
-			t.Errorf(`"%s" => expected error`, s.mail)
+			t.Logf("%s => expected error", s.mail)
 		}
 	}
 }
