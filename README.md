@@ -48,7 +48,7 @@ Again, you must have AWS SES set up to use this tool.
 
 ## Issues
 
-Please open  *issues* here: [New Issue](https://github.com/warrensbox/bulk-emailer/issues){:target="_blank"}
+Please open  *issues* here: [New Issue](https://github.com/warrensbox/bulk-emailer/issues)
 
 <hr>
 
