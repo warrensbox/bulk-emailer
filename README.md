@@ -1,12 +1,11 @@
-[![Build Status](https://travis-ci.org/warrensbox/github-appinstaller.svg?branch=master)](https://travis-ci.org/warrensbox/github-appinstaller)
-[![Go Report Card](https://goreportcard.com/badge/github.com/warrensbox/github-appinstaller)](https://goreportcard.com/report/github.com/warrensbox/github-appinstaller)
-[![CircleCI](https://circleci.com/gh/warrensbox/github-appinstaller/tree/release.svg?style=shield&circle-token=841e653fa51878de92e379563ea50abbc542d7c9)](https://circleci.com/gh/warrensbox/github-appinstaller/tree/release)
-
+[![Build Status](https://travis-ci.org/warrensbox/bulk-emailer.svg?branch=master)](https://travis-ci.org/warrensbox/bulk-emailer)
+[![Go Report Card](https://goreportcard.com/badge/github.com/warrensbox/bulk-emailer)](https://goreportcard.com/report/github.com/warrensbox/bulk-emailer)
+[![CircleCI](https://circleci.com/gh/warrensbox/bulk-emailer/tree/release.svg?style=shield&circle-token=9ae193b5ccf01cf421d909a55d76600efa1556f5)](https://circleci.com/gh/warrensbox/bulk-emailer/tree/release)
 
 
 # Bulk Emailer
 
-<img style="text-allign:center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/smallerlogo.png" alt="drawing" width="130" height="140"/>
+<img style="text-allign:center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/smallerlogo.png" alt="drawing" width="120" height="140"/>
 
 The `bulk-emailer` command line tool lets you send messages to multiple recipients simultaneously. You need to provide is a cvs file with recipient emails and email content file. 
 
@@ -18,7 +17,7 @@ The `bulk-emailer` command line tool lets you send messages to multiple recipien
 
 ### Homebrew
 
-Installation for MacOS is the easiest with Homebrew. [If you do not have homebrew installed, click here](https://brew.sh/){:target="_blank"}. 
+Installation for MacOS is the easiest with Homebrew. [If you do not have homebrew installed, click here](https://brew.sh/). 
 
 
 ```ruby
