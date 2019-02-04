@@ -1,0 +1,13 @@
+theme: jekyll-theme-minimal
+#github: [metadata] 
+repository: warrensbox/github-appinstaller
+logo: /assets/img/logo.png
+title: appinstall
+
+show_downloads: true
+
+exclude: [vendor]
+
+google_analytics: true
+
+#github: [metadata] 

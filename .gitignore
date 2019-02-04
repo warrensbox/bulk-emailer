@@ -20,6 +20,7 @@ src
 main
 build
 dist
+bulk-emailer
 
 .DS_Store
 
