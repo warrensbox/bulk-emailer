@@ -9,7 +9,7 @@
 
 The `bulk-emailer` command line tool lets you send messages to multiple recipients simultaneously. You need to provide is a cvs file with recipient emails and email content file. 
 
-See installation guide here: [awsfind installation](https://warrensbox.github.io/aws-find/)
+See installation guide here: [bulk-emailer installation](https://warrensbox.github.io/bulk-emailer)
 
 <hr>
 
