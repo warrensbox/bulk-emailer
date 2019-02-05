@@ -3,7 +3,7 @@ package lib_test
 import (
 	"testing"
 
-	checkmail "github.com/warrensbox/falcon-form/lib"
+	checkmail "github.com/warrensbox/bulk-emailer/lib"
 )
 
 var (
