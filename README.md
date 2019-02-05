@@ -5,7 +5,7 @@
 
 # Bulk Emailer
 
-<img style="text-allign:center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/smallerlogo.png" alt="drawing" width="115" height="140"/>
+<img style="text-allign:center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/smallerlogo.png" alt="drawing" width="110" height="140"/>
 
 The `bulk-emailer` command line tool lets you send messages to multiple recipients simultaneously. You need to provide is a cvs file with recipient emails and email content file. 
 

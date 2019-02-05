@@ -4,7 +4,7 @@ builds:
   - ldflags:
     - -s -w -X "main.version={{.Env.RELEASE_VERSION}}"
   - main: main.go
-    binary: bulk-emailer 
+    binary: bulkemailer 
     goos:
       - windows
       - darwin
