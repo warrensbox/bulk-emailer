@@ -55,7 +55,7 @@ brew:
 
   # Caveats for the user of your binary.
   # Default is empty.
-  caveats: "Type 'bulk-emailer install user/repo' on your command line and choose the app version that you want from the dropdown from the GitHub repo. This command currently only works on MacOs and Linux"
+  caveats: "Type 'bulk-emailer' to send messages to multiple recipients simultaneously"
 
   # Your app's homepage.
   # Default is empty.
@@ -63,7 +63,7 @@ brew:
 
   # Your app's description.
   # Default is empty.
-  description: "The bulk-emailer command lets you install binary application from github."
+  description: "The bulk-emailer command line tool lets you send messages to multiple recipients simultaneously"
 
   # Setting this will prevent goreleaser to actually try to commit the updated
   # formula - instead, the formula file will be stored on the dist folder only,
