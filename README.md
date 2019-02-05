@@ -5,7 +5,7 @@
 
 # Bulk Emailer
 
-<img style="text-allign:center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/smallerlogo.png" alt="drawing" width="110" height="140"/>
+<img style="text-allign:center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/smallerlogo.png" alt="drawing" width="90" height="130"/>
 
 The `bulk-emailer` command line tool lets you send messages to multiple recipients simultaneously. You need to provide is a cvs file with recipient emails and email content file. 
 
@@ -57,7 +57,3 @@ Again, you must have AWS SES set up to use this tool.
 
 Please open  *issues* here: [New Issue](https://github.com/warrensbox/bulk-emailer/issues)
 
-<hr>
-
-See how to *upgrade*, *uninstall*, *troubleshoot* here:
-[Additional Info](additional)

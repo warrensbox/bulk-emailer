@@ -5,13 +5,13 @@ set -e
 usage() {
   this=$1
   cat <<EOF
-$this: download go binaries for warrensbox/appinstall
+$this: download go binaries for warrensbox/bulk-emailer
 
 Usage: $this [-b] bindir [-d] [tag]
   -b sets bindir or installation directory, Defaults to ./bin
   -d turns on debug logging
    [tag] is a tag from
-   https://github.com/warrensbox/github-appinstaller/releases
+   https://github.com/warrensbox/bulk-emailer/releases
    If tag is missing, then the latest will be used.
 
 EOF
@@ -46,7 +46,7 @@ execute() {
   srcdir="${tmpdir}"
   (cd "${tmpdir}" && untar "${TARBALL}")
   install -d "${BINDIR}"
-  for binexe in "appinstall" ; do
+  for binexe in "bulk-emailer" ; do
     if [ "$OS" = "windows" ]; then
       binexe="${binexe}.exe"
     fi
@@ -334,10 +334,10 @@ End of functions from https://github.com/client9/shlib
 ------------------------------------------------------------------------
 EOF
 
-PROJECT_NAME="github-appinstaller"
+PROJECT_NAME="bulk-emailer"
 OWNER=warrensbox
-REPO="github-appinstaller"
-BINARY=appinstall
+REPO="bulk-emailer"
+BINARY=bulk-emailer
 FORMAT=tar.gz
 OS=$(uname_os)
 ARCH=$(uname_arch)
