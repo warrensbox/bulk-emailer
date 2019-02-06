@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
 #github: [metadata] 
-repository: warrensbox/github-appinstaller
+repository: warrensbox/aws-finder
 logo: /assets/img/logo.png
-title: appinstall
+title: aws-find
 
 show_downloads: true
 
