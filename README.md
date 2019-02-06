@@ -42,7 +42,7 @@ Alternatively, you can install the binary from the source [here](https://github.
 
 ## How to use:
 ### Pass in the required parameters 
-<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/github-bulk-emailer/bulk-emailerdemo1.gif" alt="drawing" style="width: 480px;"/>
+<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-demo.gif" alt="drawing" style="width: 480px;"/>
 
 1.  Type `bulk-emailer` on the command line with the following parameters: 
 2.  Parameter `--from` (string) for sender's email.
@@ -51,6 +51,10 @@ Alternatively, you can install the binary from the source [here](https://github.
 5.  Parameter `--contacts` (file) path to the cvs file of your recipients.
 6.  Hit **Enter** to send messages to recipient simutaneouly.
 
+##Emails sent  
+<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-ouput.jpeg" alt="drawing" style="width: 200px;"/>
+
+##Prerequisite 
 Again, you must have AWS SES set up to use this tool.
 
 <hr>

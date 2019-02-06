@@ -1,13 +1,12 @@
-# GitHub App Installer
+# Bulk Emailer
 
-The `appinstall` command line tool lets you install app binaries from github user's releases. 
-Once installed, simply select the version you require from the dropdown and start using the downloaded github user's app.  
+The `bulk-emailer` command line tool lets you send messages to multiple recipients simultaneously. You need to provide is a cvs file with recipient emails and email content file. 
 
 <hr>
 
 ## Installation
 
-`appinstall` is available for MacOS and Linux based operating systems.
+`bulk-emailer` is available for MacOS and Linux based operating systems.
 
 ### Homebrew
 
@@ -15,7 +14,7 @@ Installation for MacOS is the easiest with Homebrew. [If you do not have homebre
 
 
 ```ruby
-brew install warrensbox/tap/appinstall
+brew install warrensbox/tap/bulk-emailer
 ```
 
 ### Linux
@@ -23,44 +22,37 @@ brew install warrensbox/tap/appinstall
 Installation for Linux operation systems.
 
 ```sh
-curl -L https://raw.githubusercontent.com/warrensbox/github-appinstaller/release/install.sh | bash
+curl -L https://raw.githubusercontent.com/warrensbox/bulk-emailer/release/install.sh | bash
 ```
 
 ### Install from source
 
-Alternatively, you can install the binary from the source [here](https://github.com/warrensbox/github-appinstaller/releases) 
+Alternatively, you can install the binary from the source [here](https://github.com/warrensbox/bulk-emailer/releases) 
 
 <hr>
 
 ## How to use:
-### Use dropdown menu to select version
-<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/github-appinstall/appinstalldemo1.gif" alt="drawing" style="width: 480px;"/>
+### Pass in the required parameters 
+<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-demo.gif" alt="drawing" style="width: 480px;"/>
 
-1.  You can install and switch between different versions of github user's app by typing the command `appinstall install user/repo` on your terminal. 
-2.  Select the version of binary by using the up and down arrow.
-3.  Hit **Enter** to install the desired version.
+1.  Type `bulk-emailer` on the command line with the following parameters: 
+2.  Parameter `--from` (string) for sender's email.
+3.  Parameter `--subject`(string) for the subject of the email.
+4.  Parameter `--message` (file) path to the file of your email content.
+5.  Parameter `--contacts` (file) path to the cvs file of your recipients.
+6.  Hit **Enter** to send messages to recipient simutaneouly.
 
-The most recently selected versions are presented at the top of the dropdown.
+##Emails sent  
+<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-ouput.jpeg" alt="drawing" style="width: 200px;"/>
 
-### Upgrade current version
-<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/github-appinstall/appinstalldemo2.gif" alt="drawing" style="width: 480px;"/>
-
-1. You can also upgrade to latest version of the app.
-2. For example, `appinstall upgrade user/repo`  to upgrade to a higher version of the app.
-3. Hit **Enter** to upgrade.
-
-### Uninstall GitHub app
-<img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/github-appinstall/appinstalldemo3.gif" alt="drawing" style="width: 480px;"/>
-
-1. You can also uninstalled github user's.
-2. For example, `appinstall upgrade user/repo` to uninstall to a higher version of the app.
-3. Hit **Enter** to uninstall.
+##Prerequisite 
+Again, you must have AWS SES set up to use this tool.
 
 <hr>
 
 ## Issues
 
-Please open  *issues* here: [New Issue](https://github.com/warrensbox/github-appinstaller/issues){:target="_blank"}
+Please open  *issues* here: [New Issue](https://github.com/warrensbox/bulk-emailer/issues){:target="_blank"}
 
 <hr>
 
