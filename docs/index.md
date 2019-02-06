@@ -31,6 +31,13 @@ Alternatively, you can install the binary from the source [here](https://github.
 
 <hr>
 
+## Prerequisite 
+You must have AWS SES set up to use this tool.
+
+See how to set up AWS SES: [Set Up AWS SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html)
+
+<hr>
+
 ## How to use:
 ### Pass in the required parameters 
 <img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-demo.gif" alt="drawing" style="width: 480px;"/>
@@ -44,9 +51,6 @@ Alternatively, you can install the binary from the source [here](https://github.
 
 ## Emails sent  
 <img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-ouput.jpeg" alt="drawing" style="width: 200px;"/>
-
-## Prerequisite 
-Again, you must have AWS SES set up to use this tool.
 
 <hr>
 
