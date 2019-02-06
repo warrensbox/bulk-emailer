@@ -42,7 +42,7 @@ Alternatively, you can install the binary from the source [here](https://github.
 5.  Parameter `--contacts` (file) path to the cvs file of your recipients.
 6.  Hit **Enter** to send messages to recipient simutaneouly.
 
-##Emails sent  
+## Emails sent  
 <img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-ouput.jpeg" alt="drawing" style="width: 200px;"/>
 
 ##Prerequisite 
