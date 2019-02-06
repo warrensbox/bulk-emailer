@@ -45,7 +45,7 @@ Alternatively, you can install the binary from the source [here](https://github.
 ## Emails sent  
 <img align="center" src="https://s3.us-east-2.amazonaws.com/kepler-images/warrensbox/bulk-emailer/bulk-emailer-ouput.jpeg" alt="drawing" style="width: 200px;"/>
 
-##Prerequisite 
+## Prerequisite 
 Again, you must have AWS SES set up to use this tool.
 
 <hr>
