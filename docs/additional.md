@@ -6,14 +6,14 @@
 ### Homebrew
 
 ```ruby
-brew upgrade warrensbox/tap/aws-find
+brew upgrade warrensbox/tap/bulk-emailer
 ```
 ### Linux
 
 Rerun:
 
 ```sh
-curl -L https://raw.githubusercontent.com/warrensbox/aws-finder/release/install.sh | bash
+curl -L https://raw.githubusercontent.com/warrensbox/bulk-emailerer/release/install.sh | bash
 ```
 
 ## Uninstall:
@@ -21,14 +21,14 @@ curl -L https://raw.githubusercontent.com/warrensbox/aws-finder/release/install.
 ### Homebrew
 
 ```ruby
-brew uninstall warrensbox/tap/aws-find
+brew uninstall warrensbox/tap/bulk-emailer
 ```
 ### Linux
 
 Rerun:
 
 ```sh
-rm /usr/local/bin/aws-find
+rm /usr/local/bin/bulk-emailer
 ```
 
 ## Troubleshoot:
@@ -45,7 +45,7 @@ install: can't change permissions of /usr/local/bin: Operation not permitted
 ```ruby
 "Unable to create symlink. You must have SUDO privileges"
 ```
-You probably need to have **sudo** privileges to install *aws-find*.
+You probably need to have **sudo** privileges to install *bulk-emailer*.
 
 [Back to top](#upgrade)    
 [Back to main](index)

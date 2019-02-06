@@ -42,7 +42,7 @@ func init() {
 
 	const (
 		cmdDesc           = "Lets you send bulk emails"
-		versionFlagDesc   = "Displays the version of aws-find"
+		versionFlagDesc   = "Displays the version of bulk-emailer"
 		fromEmailgDesc    = "Provide sender's email"
 		msgContentDesc    = "Provide message content"
 		msgSubjectDesc    = "Provide email subject"

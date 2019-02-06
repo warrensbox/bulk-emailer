@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
 #github: [metadata] 
-repository: warrensbox/aws-finder
+repository: warrensbox/bulk-emailerer
 logo: /assets/img/logo.png
-title: aws-find
+title: bulk-emailer
 
 show_downloads: true
 
